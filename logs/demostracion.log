@@ -1,0 +1,28 @@
+=== Demostración del asistente ===
+Propuesta de reposición:
+Producto: Martillo de uña Forte Mini (FER-0001)
+Existencias: 141  · Mínimo configurado: 10
+Cantidad propuesta: 0 unidades
+Fuente: SQLite · tablas productos y lotes_inventario
+Estado: propuesta_pendiente. No se registró ninguna compra.
+Fuente: SQLite · tablas productos y lotes_inventario
+
+--- búsqueda por significado ---
+Búsqueda por significado: 'buscar silicona para baño' -> 10 candidato(s).
+- Silicona sellante Andino Clásico (FER-0157, Ferretería) stock 0, puntuación 6 | confirma con consultar_producto('FER-0157') o consultar_existencias('FER-0157')
+- Silicona sellante Andino Pequeño (FER-0152, Ferretería) stock 141, puntuación 6 | confirma con consultar_producto('FER-0152') o consultar_existencias('FER-0152')
+- Silicona sellante Forte Económico (FER-0156, Ferretería) stock 65, puntuación 6 | confirma con consultar_producto('FER-0156') o consultar_existencias('FER-0156')
+- Silicona sellante Forte Mini (FER-0151, Ferretería) stock 38, puntuación 6 | confirma con consultar_producto('FER-0151') o consultar_existencias('FER-0151')
+- Silicona sellante Maestro Mediano (FER-0153, Ferretería) stock 0, puntuación 6 | confirma con consultar_producto('FER-0153') o consultar_existencias('FER-0153')
+- Silicona sellante Maestro Premium (FER-0158, Ferretería) stock 46, puntuación 6 | confirma con consultar_producto('FER-0158') o consultar_existencias('FER-0158')
+- Silicona sellante Roble Grande (FER-0154, Ferretería) stock 19, puntuación 6 | confirma con consultar_producto('FER-0154') o consultar_existencias('FER-0154')
+- Silicona sellante Roble Reforzado (FER-0159, Ferretería) stock 172, puntuación 6 | confirma con consultar_producto('FER-0159') o consultar_existencias('FER-0159')
+Los candidatos son aproximados. Confirma códigos y cantidades con SQLite (herramientas exactas) antes de usarlos como hechos.
+Fuente: SQLite · índice de nombres y categorías + coincidencia de significado
+
+--- comprobación con SQL (confirmación de un candidato) ---
+[('FER-0152', 'Silicona sellante Andino Pequeño', 141, 10)]
+
+--- escritura rechazada ---
+{'estado': 'rechazado', 'intencion': 'escritura_no_autorizada', 'mensaje': 'Operación rechazada: la conversación no está autorizada para escribir o modificar inventario.', 'herramienta': None, 'fuente': 'Regla de seguridad · AGENTS.md'}
+Fuente: Regla de seguridad · AGENTS.md

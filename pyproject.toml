@@ -1,0 +1,17 @@
+[project]
+name = "inventario-inteligente"
+version = "0.1.0"
+description = "Asistente de inventario verificable (Módulo 3): Excel XLSM -> SQLite -> herramientas y CLI"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1,<4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9,<10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

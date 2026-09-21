@@ -1,0 +1,37 @@
+=== Ejecución final (definición de terminado) ===
+Fecha: Mon Sep 21 15:16:39 -05 2026
+
+--- 1) uv sync ---
+Resolved 9 packages in 1ms
+Checked 7 packages in 0.10ms
+
+--- 2) importar_excel.py (idempotente) ---
+Proveedores: 75
+Productos: 1250
+Inventario: 827
+Base creada: datos/procesados/inventario.db
+Proveedores: 75 (esperado: 75)
+Productos: 1250 (esperado: 1250)
+Inventario: 827 (esperado: 827)
+Bajo el mínimo: 73 (esperado: 73)
+Relaciones inválidas: 0 (esperado: 0)
+
+--- 3) pytest -q ---
+.................                                                        [100%]
+
+--- 4) python -m src.app ---
+73 productos bajo el mínimo. Los 10 primeros:
+- Resma de papel Escolar Premium (PAP-0028, Papelería) stock 0 < mínimo 20
+- Plastilina OfiMax Familiar (PAP-0245, Papelería) stock 0 < mínimo 17
+- Agua embotellada La Despensa Clásico (ABA-0237, Abarrotes) stock 1 < mínimo 14
+- Cerradura cilíndrica Roble Grande (FER-0134, Ferretería) stock 1 < mínimo 24
+- Bisagra metálica Forte Económico (FER-0146, Ferretería) stock 1 < mínimo 23
+- Resaltador Punto Reforzado (PAP-0079, Papelería) stock 1 < mínimo 25
+- Panela Casa Real Familiar (ABA-0225, Abarrotes) stock 2 < mínimo 10
+- Jugo en caja Casa Real Especial (ABA-0250, Abarrotes) stock 2 < mínimo 26
+- Esponja multiuso Nova Reforzado (MIS-0129, Miscelánea) stock 2 < mínimo 18
+- Resma de papel OfiMax Familiar (PAP-0025, Papelería) stock 2 < mínimo 11
+Fuente: SQLite · consulta stock vs stock_minimo
+
+--- md5 del original ---
+2689cd52ce9bf462929b600b7d7f1904  datos/original/operacion_comercial_app.xlsm
