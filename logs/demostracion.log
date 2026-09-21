@@ -1,4 +1,54 @@
 === Demostración del asistente ===
+Fecha: Mon Sep 21 16:59:36 -05 2026
+
+--- código válido (ficha) ---
+Producto: Martillo de uña Forte Mini (FER-0001)
+Categoría: Ferretería  · Proveedor: Distribuciones Andina FER S.A.S.
+Precio costo: $98,600  · Precio venta: $121,300
+Fuente: SQLite · tablas productos y proveedores
+
+--- existencias + lotes ---
+Martillo de uña Forte Mini (FER-0001)
+Existencias: 141  · Mínimo: 10
+Lotes: LT-2506251 (141 u., E-03-05, vence N/A)
+Corte de datos: 2026-09-04
+Fuente: SQLite · tablas productos y lotes_inventario
+
+--- próximos a vencer en 30 días ---
+Con corte en 2026-09-04:
+- Por vencer en 30 días: 16 lote(s)
+  · Jugo en caja Andes Reforzado (ABA-0249) lote LT-2487491, vence 2026-09-07 (faltan 3 días)
+  · Reloj de pared HogarPlus Pequeño (MIS-0212) lote LT-2592348, vence 2026-09-08 (faltan 4 días)
+  · Cereal de maíz Rico Día Mediano (ABA-0173) lote LT-2635105, vence 2026-09-09 (faltan 5 días)
+  · Mayonesa La Despensa Pequeño (ABA-0202) lote LT-2455545, vence 2026-09-09 (faltan 5 días)
+  · Sal yodada Rico Día Mediano (ABA-0023) lote LT-2636750, vence 2026-09-18 (faltan 14 días)
+  · Garbanzo Andes Reforzado (ABA-0099) lote LT-2577966, vence 2026-09-18 (faltan 14 días)
+  · Cereal de maíz Buen Campo Económico (ABA-0176) lote LT-2615665, vence 2026-09-20 (faltan 16 días)
+  · Pasta corta La Despensa Clásico (ABA-0057) lote LT-2515187, vence 2026-09-23 (faltan 19 días)
+  · Café molido Andes Grande (ABA-0134) lote LT-2670956, vence 2026-09-24 (faltan 20 días)
+  · Pinza para ropa HogarPlus Pequeño (MIS-0172) lote LT-2434132, vence 2026-09-25 (faltan 21 días)
+- Vencidos (separados del disponible): 124
+  · Cepillo de ropa Práctika Mini (MIS-0041) lote LT-2401144, vence 2025-03-23
+  · Kit de costura Nova Grande (MIS-0234) lote LT-2516785, vence 2025-03-26
+  · Caldo concentrado Rico Día Mediano (ABA-0213) lote LT-2537135, vence 2025-03-30
+  · Sombrilla plegable Útil Familiar (MIS-0035) lote LT-2633207, vence 2025-03-30
+  · Aceite vegetal Rico Día Mediano (ABA-0043) lote LT-2511930, vence 2025-04-03
+Fuente: SQLite · tabla lotes_inventario (corte reproducible)
+
+--- búsqueda por significado ---
+Búsqueda por significado: 'buscar algo para clavar clavos' -> 10 candidato(s).
+- Clavo de acero Andino Clásico (FER-0107, Ferretería) stock 156, puntuación 3 | confirma con consultar_producto('FER-0107') o consultar_existencias('FER-0107')
+- Clavo de acero Andino Pequeño (FER-0102, Ferretería) stock 0, puntuación 3 | confirma con consultar_producto('FER-0102') o consultar_existencias('FER-0102')
+- Clavo de acero Forte Económico (FER-0106, Ferretería) stock 138, puntuación 3 | confirma con consultar_producto('FER-0106') o consultar_existencias('FER-0106')
+- Clavo de acero Forte Mini (FER-0101, Ferretería) stock 158, puntuación 3 | confirma con consultar_producto('FER-0101') o consultar_existencias('FER-0101')
+- Clavo de acero Maestro Mediano (FER-0103, Ferretería) stock 50, puntuación 3 | confirma con consultar_producto('FER-0103') o consultar_existencias('FER-0103')
+- Clavo de acero Maestro Premium (FER-0108, Ferretería) stock 180, puntuación 3 | confirma con consultar_producto('FER-0108') o consultar_existencias('FER-0108')
+- Clavo de acero Roble Grande (FER-0104, Ferretería) stock 138, puntuación 3 | confirma con consultar_producto('FER-0104') o consultar_existencias('FER-0104')
+- Clavo de acero Roble Reforzado (FER-0109, Ferretería) stock 96, puntuación 3 | confirma con consultar_producto('FER-0109') o consultar_existencias('FER-0109')
+Los candidatos son aproximados. Confirma códigos y cantidades con SQLite (herramientas exactas) antes de usarlos como hechos.
+Fuente: SQLite · índice de nombres y categorías + coincidencia de significado
+
+--- reposición (propuesta pendiente) ---
 Propuesta de reposición:
 Producto: Martillo de uña Forte Mini (FER-0001)
 Existencias: 141  · Mínimo configurado: 10
@@ -7,22 +57,12 @@ Fuente: SQLite · tablas productos y lotes_inventario
 Estado: propuesta_pendiente. No se registró ninguna compra.
 Fuente: SQLite · tablas productos y lotes_inventario
 
---- búsqueda por significado ---
-Búsqueda por significado: 'buscar silicona para baño' -> 10 candidato(s).
-- Silicona sellante Andino Clásico (FER-0157, Ferretería) stock 0, puntuación 6 | confirma con consultar_producto('FER-0157') o consultar_existencias('FER-0157')
-- Silicona sellante Andino Pequeño (FER-0152, Ferretería) stock 141, puntuación 6 | confirma con consultar_producto('FER-0152') o consultar_existencias('FER-0152')
-- Silicona sellante Forte Económico (FER-0156, Ferretería) stock 65, puntuación 6 | confirma con consultar_producto('FER-0156') o consultar_existencias('FER-0156')
-- Silicona sellante Forte Mini (FER-0151, Ferretería) stock 38, puntuación 6 | confirma con consultar_producto('FER-0151') o consultar_existencias('FER-0151')
-- Silicona sellante Maestro Mediano (FER-0153, Ferretería) stock 0, puntuación 6 | confirma con consultar_producto('FER-0153') o consultar_existencias('FER-0153')
-- Silicona sellante Maestro Premium (FER-0158, Ferretería) stock 46, puntuación 6 | confirma con consultar_producto('FER-0158') o consultar_existencias('FER-0158')
-- Silicona sellante Roble Grande (FER-0154, Ferretería) stock 19, puntuación 6 | confirma con consultar_producto('FER-0154') o consultar_existencias('FER-0154')
-- Silicona sellante Roble Reforzado (FER-0159, Ferretería) stock 172, puntuación 6 | confirma con consultar_producto('FER-0159') o consultar_existencias('FER-0159')
-Los candidatos son aproximados. Confirma códigos y cantidades con SQLite (herramientas exactas) antes de usarlos como hechos.
-Fuente: SQLite · índice de nombres y categorías + coincidencia de significado
+--- producto inexistente ---
+[producto_inexistente] No existe el producto 'XYZ-9999' en la base.  · Fuente: SQLite · tablas productos y proveedores
+
+--- escritura no autorizada ---
+[rechazado] Operación rechazada: la conversación no está autorizada para escribir o modificar inventario.
+Fuente: Regla de seguridad · AGENTS.md
 
 --- comprobación con SQL (confirmación de un candidato) ---
-[('FER-0152', 'Silicona sellante Andino Pequeño', 141, 10)]
-
---- escritura rechazada ---
-{'estado': 'rechazado', 'intencion': 'escritura_no_autorizada', 'mensaje': 'Operación rechazada: la conversación no está autorizada para escribir o modificar inventario.', 'herramienta': None, 'fuente': 'Regla de seguridad · AGENTS.md'}
-Fuente: Regla de seguridad · AGENTS.md
+('FER-0152', 'Silicona sellante Andino Pequeño', 141, 10)

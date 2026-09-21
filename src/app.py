@@ -70,6 +70,8 @@ def _formatear(resultado: dict[str, Any]) -> str:
         return f"[{resultado['tipo']}] {resultado['mensaje']}"
     if estado == "no_encontrado":
         return f"[{resultado['tipo']}] {resultado['mensaje']}  · Fuente: {resultado.get('fuente', '-')}"
+    if estado == "rechazado":
+        return f"[rechazado] {resultado['mensaje']}\nFuente: {resultado.get('fuente', '-')}"
     caso = {
         "consultar_producto": lambda r: (
             f"Producto: {r['producto']['nombre']} ({r['producto']['codigo']})\n"

@@ -1,11 +1,13 @@
 === Ejecución final (definición de terminado) ===
-Fecha: Mon Sep 21 15:16:39 -05 2026
+Fecha: Mon Sep 21 16:58:58 -05 2026
 
 --- 1) uv sync ---
-Resolved 9 packages in 1ms
-Checked 7 packages in 0.10ms
+Resolved 9 packages in 3ms
+Checked 7 packages in 30ms
 
---- 2) importar_excel.py (idempotente) ---
+--- 2) importar_excel.py (1ª ejecución) ---
+  warn(msg)
+  warn(msg)
 Proveedores: 75
 Productos: 1250
 Inventario: 827
@@ -16,10 +18,23 @@ Inventario: 827 (esperado: 827)
 Bajo el mínimo: 73 (esperado: 73)
 Relaciones inválidas: 0 (esperado: 0)
 
---- 3) pytest -q ---
+--- 3) importar_excel.py (2ª ejecución, verificación de idempotencia) ---
+  warn(msg)
+  warn(msg)
+Proveedores: 75
+Productos: 1250
+Inventario: 827
+Base creada: datos/procesados/inventario.db
+Proveedores: 75 (esperado: 75)
+Productos: 1250 (esperado: 1250)
+Inventario: 827 (esperado: 827)
+Bajo el mínimo: 73 (esperado: 73)
+Relaciones inválidas: 0 (esperado: 0)
+
+--- 4) pytest -q ---
 .................                                                        [100%]
 
---- 4) python -m src.app ---
+--- 5) python -m src.app (bajo mínimo) ---
 73 productos bajo el mínimo. Los 10 primeros:
 - Resma de papel Escolar Premium (PAP-0028, Papelería) stock 0 < mínimo 20
 - Plastilina OfiMax Familiar (PAP-0245, Papelería) stock 0 < mínimo 17
